@@ -1,0 +1,57 @@
+.timer {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  margin-top: -30px;
+
+  p {
+    font-family: "High Summer", sans-serif;
+    font-size: 30px;
+    line-height: 25px;
+  }
+
+  &-wrapper {
+    width: 50%;
+    margin-top: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .box p,
+  .box {
+    font-family: "High Summer";
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .timer {
+    margin-top: 0;
+
+    &-wrapper {
+      margin-top: 0;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .timer {
+    font-size: 20px;
+    p {
+      font-size: 20px;
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timer {
+    margin-top: -45px;
+  }
+}

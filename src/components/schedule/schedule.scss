@@ -1,0 +1,48 @@
+@import "../../assets/vars.scss";
+
+.schedule {
+  background-color: $sec-color-dark;
+  height: 100vh;
+  height: 100svh;
+  font-family: "Lato", sans-serif;
+  color: $white-color;
+
+  &__title {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+    height: 70%;
+
+    li {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    li span {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .schedule {
+    &__title {
+      font-size: 30px;
+    }
+
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+}

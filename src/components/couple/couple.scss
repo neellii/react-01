@@ -1,0 +1,120 @@
+@import "../../assets/vars.scss";
+
+.couple {
+  height: 100svh;
+  height: 100vh;
+  background: $bg-color;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  transform-origin: 0% 0%;
+  overflow: hidden;
+
+  .reveal {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 70%;
+    padding-top: 25%;
+    margin: 50px auto 0 auto;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+    filter: grayscale(50%);
+  }
+
+  &__leaf1 {
+    position: absolute;
+    z-index: -1;
+    width: 200px;
+    top: -1rem;
+    left: 12rem;
+    transform: rotate(-15deg);
+  }
+
+  &__leaf2 {
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    bottom: 8rem;
+    right: 10rem;
+    transform: rotate(84deg) scaleY(-1);
+  }
+
+  p {
+    font-size: 22px;
+    margin-top: 20px;
+    width: 50%;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .couple {
+    .couple__leaf1 {
+      left: 7rem;
+    }
+
+    .couple__leaf2 {
+      right: 4rem;
+      bottom: 10rem;
+    }
+
+    p {
+      margin: 20px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .couple {
+    .couple__leaf1 {
+      top: 2rem;
+      left: 5rem;
+      width: 150px;
+    }
+
+    .couple__leaf2 {
+      right: 3rem;
+      bottom: 13rem;
+      width: 150px;
+    }
+
+    p {
+      margin: 10px auto;
+      font-size: 18px;
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .couple {
+    .couple__leaf1 {
+      top: 0rem;
+      left: 1rem;
+      width: 150px;
+    }
+
+    .couple__leaf2 {
+      right: 0rem;
+      bottom: 15rem;
+      width: 100px;
+    }
+
+    .reveal {
+      width: 70%;
+    }
+
+    p {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../assets/vars.scss";
+
+.audio-btn {
+  border: none;
+  margin-top: 30px;
+  transition: color 2s ease-in;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.equalizer__wrapper {
+  display: flex;
+
+  .bar {
+    background: $sec-color-dark;
+    display: block;
+    height: 15px;
+    margin-left: 3px;
+    opacity: 0.5;
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+    width: 3px;
+    animation: bar 0.4s ease infinite alternate both;
+    transition: height 1s ease;
+  }
+
+  .bar-1 {
+    animation-delay: 0.2s;
+  }
+  .bar-2 {
+    animation-delay: 0.4s;
+  }
+  .bar-3 {
+    animation-delay: 0.6s;
+  }
+}
+
+@keyframes bar {
+  0% {
+    transform: scaleY(1);
+  }
+}
+
+.anim-off {
+  animation: none !important;
+  height: 0 !important;
+}

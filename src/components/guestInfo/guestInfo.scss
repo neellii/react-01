@@ -1,0 +1,146 @@
+@import "../../assets/vars.scss";
+
+.guest {
+  height: 100vh;
+  height: 100svh;
+  background-color: $bg-color;
+  padding-top: 50px;
+
+  h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  &__info-wrapper {
+    width: 100%;
+    background-color: $bg-color;
+  }
+
+  &__info {
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 60vw;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: $bg-color;
+  }
+
+  &__contacts {
+    height: 200px;
+    background-color: $sec-color;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 10px;
+  margin: 40px auto 0 auto;
+  max-width: 60vw;
+}
+
+.accordion {
+  width: 100%;
+
+  &__title {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    font-size: 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.3s ease-in-out;
+    font-family: "Lato", sans-serif;
+  }
+}
+
+.show {
+  max-height: 200px;
+}
+
+.selected-span {
+  width: 16px;
+  height: 16px;
+  position: relative;
+
+  & div:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    background-color: $sec-color-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & div:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    background-color: $sec-color-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: height 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .accordion-wrapper {
+    max-width: 80vw;
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .guest {
+    h2 {
+      font-size: 30px;
+    }
+
+    &__info {
+      max-width: 80vw;
+      font-size: 18px;
+    }
+  }
+
+  .accordion-wrapper {
+    max-width: 80vw;
+    row-gap: 20px;
+  }
+
+  .accordion {
+    &__title {
+      font-size: 18px;
+    }
+
+    &__content {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .accordion-wrapper {
+    max-width: 90vw;
+    row-gap: 10px;
+  }
+}
